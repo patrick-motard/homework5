@@ -1,0 +1,51 @@
+file
+
+Start
+
+file
+
+
+Syntactic
+
+%LeStart		:   file -> blocks maybe-nl.
+%Blocks			:	blocks -> blocks nl blocks.
+%Blocks			:	blocks -> equations nl.
+
+%Equations		: 	equations -> equation nl equations.
+%Equations 		: 	equations -> equation.
+
+derp	: file -> 	equation.
+Equation		:	equation -> patterns space '=' space terms.
+
+
+Patterns 		: 	patterns -> pattern space patterns.
+Patterns 		: 	patterns -> pattern.
+
+
+Pattern-name	: 	pattern -> letter maybe-lets-nums.
+Pattern-pair	:	pattern -> '[' ows pattern ows ',' ows pattern ows ']'.
+
+Terms			: 	terms -> term space terms.
+Terms 			: 	terms -> term.
+Term-name		: 	term -> letter lets-nums*.
+Term-pair		: 	term -> '[' ows term ows ',' ows term ows ']'.
+Term-literal	: 	term -> '"' literal '"'.
+Term-paren		:	term -> '(' ows term ows ')'.
+Term-app		:	term -> term '(' term ')'.
+
+
+Lexical
+
+nl => '\n'.
+maybe-nl => nl*.
+ows => space.
+ows => .
+letter => ['a' - 'z' 'A' - 'Z'].
+lets-nums => ['a' - 'z' 'A' - 'Z' '0' - '9'].
+maybe-lets-nums => lets-nums*.
+maybe-lets-nums => .
+
+symbols => ('\' | '\"' | ',' | '.' | space).
+literals => literal literals.
+literals => literal.
+literal => symbols | lets-nums.

@@ -1,0 +1,23 @@
+main block
+
+blocks : 
+	- there is an additional new line between blocks
+	- list of equations
+
+		- equations :
+			- each equation must be written on a single line
+			- equations are terminated by a new line
+			- left side is a pattern
+				- pattern : 
+					- names				: (pattern variables or defined symbols) letters(up or lower) + maybe more let/num
+					- pairs of terms	: [x,y] where x and y are variables
+			- right hand side is a term
+				- term :
+					- names 			: (pattern variables or defined symbols) letters(up or lower) + maybe more let/num
+					- pair of terms 	: [x,y] ows(spaces only) throughout
+					- string literal	: (lets, nums, ',', '.', space, '\', or '\"', or none) between " " 
+					- paraenthesis		: '(' ows term ows ')'
+					- application		: term ( other term )
+
+
+

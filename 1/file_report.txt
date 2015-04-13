@@ -1,0 +1,682 @@
+Beginning processing of grammar file.
+(Time elapsed: 0.)
+Converted grammar to AST for grammars.
+file
+
+Start
+
+file
+
+
+
+Syntactic
+
+derp : file -> equation .
+Equation : equation -> patterns ' ' '=' ' ' terms .
+Patterns : patterns -> pattern ' ' patterns .
+Patterns/1 : patterns -> pattern .
+Pattern : pattern -> 'h' 'i' .
+Terms : terms -> term ' ' terms .
+Terms/1 : terms -> term .
+Term-name-0 : term-star-1 -> .
+Term-name-1 : term-star-1 -> lets-nums term-star-1 .
+Term-name : term -> letter term-star-1 .
+Term-pair : term -> '[' ows term ows ',' ows term ows ']' .
+Term-literal : term -> '"' literal '"' .
+Term-paren : term -> '(' ows term ows ')' .
+Term-app : term -> term '(' term ')' .
+
+
+Lexical
+
+nl => '\n' .
+maybe-nl-star-2 => .
+maybe-nl-star-2 => nl maybe-nl-star-2 .
+maybe-nl => maybe-nl-star-2 .
+ows => ' ' .
+ows => .
+letter-range-3 => 'A' .
+letter-range-3 => 'B' .
+letter-range-3 => 'C' .
+letter-range-3 => 'D' .
+letter-range-3 => 'E' .
+letter-range-3 => 'F' .
+letter-range-3 => 'G' .
+letter-range-3 => 'H' .
+letter-range-3 => 'I' .
+letter-range-3 => 'J' .
+letter-range-3 => 'K' .
+letter-range-3 => 'L' .
+letter-range-3 => 'M' .
+letter-range-3 => 'N' .
+letter-range-3 => 'O' .
+letter-range-3 => 'P' .
+letter-range-3 => 'Q' .
+letter-range-3 => 'R' .
+letter-range-3 => 'S' .
+letter-range-3 => 'T' .
+letter-range-3 => 'U' .
+letter-range-3 => 'V' .
+letter-range-3 => 'W' .
+letter-range-3 => 'X' .
+letter-range-3 => 'Y' .
+letter-range-3 => 'Z' .
+letter-range-3 => 'a' .
+letter-range-3 => 'b' .
+letter-range-3 => 'c' .
+letter-range-3 => 'd' .
+letter-range-3 => 'e' .
+letter-range-3 => 'f' .
+letter-range-3 => 'g' .
+letter-range-3 => 'h' .
+letter-range-3 => 'i' .
+letter-range-3 => 'j' .
+letter-range-3 => 'k' .
+letter-range-3 => 'l' .
+letter-range-3 => 'm' .
+letter-range-3 => 'n' .
+letter-range-3 => 'o' .
+letter-range-3 => 'p' .
+letter-range-3 => 'q' .
+letter-range-3 => 'r' .
+letter-range-3 => 's' .
+letter-range-3 => 't' .
+letter-range-3 => 'u' .
+letter-range-3 => 'v' .
+letter-range-3 => 'w' .
+letter-range-3 => 'x' .
+letter-range-3 => 'y' .
+letter-range-3 => 'z' .
+letter => letter-range-3 .
+lets-nums-range-4 => '0' .
+lets-nums-range-4 => '1' .
+lets-nums-range-4 => '2' .
+lets-nums-range-4 => '3' .
+lets-nums-range-4 => '4' .
+lets-nums-range-4 => '5' .
+lets-nums-range-4 => '6' .
+lets-nums-range-4 => '7' .
+lets-nums-range-4 => '8' .
+lets-nums-range-4 => '9' .
+lets-nums-range-4 => 'A' .
+lets-nums-range-4 => 'B' .
+lets-nums-range-4 => 'C' .
+lets-nums-range-4 => 'D' .
+lets-nums-range-4 => 'E' .
+lets-nums-range-4 => 'F' .
+lets-nums-range-4 => 'G' .
+lets-nums-range-4 => 'H' .
+lets-nums-range-4 => 'I' .
+lets-nums-range-4 => 'J' .
+lets-nums-range-4 => 'K' .
+lets-nums-range-4 => 'L' .
+lets-nums-range-4 => 'M' .
+lets-nums-range-4 => 'N' .
+lets-nums-range-4 => 'O' .
+lets-nums-range-4 => 'P' .
+lets-nums-range-4 => 'Q' .
+lets-nums-range-4 => 'R' .
+lets-nums-range-4 => 'S' .
+lets-nums-range-4 => 'T' .
+lets-nums-range-4 => 'U' .
+lets-nums-range-4 => 'V' .
+lets-nums-range-4 => 'W' .
+lets-nums-range-4 => 'X' .
+lets-nums-range-4 => 'Y' .
+lets-nums-range-4 => 'Z' .
+lets-nums-range-4 => 'a' .
+lets-nums-range-4 => 'b' .
+lets-nums-range-4 => 'c' .
+lets-nums-range-4 => 'd' .
+lets-nums-range-4 => 'e' .
+lets-nums-range-4 => 'f' .
+lets-nums-range-4 => 'g' .
+lets-nums-range-4 => 'h' .
+lets-nums-range-4 => 'i' .
+lets-nums-range-4 => 'j' .
+lets-nums-range-4 => 'k' .
+lets-nums-range-4 => 'l' .
+lets-nums-range-4 => 'm' .
+lets-nums-range-4 => 'n' .
+lets-nums-range-4 => 'o' .
+lets-nums-range-4 => 'p' .
+lets-nums-range-4 => 'q' .
+lets-nums-range-4 => 'r' .
+lets-nums-range-4 => 's' .
+lets-nums-range-4 => 't' .
+lets-nums-range-4 => 'u' .
+lets-nums-range-4 => 'v' .
+lets-nums-range-4 => 'w' .
+lets-nums-range-4 => 'x' .
+lets-nums-range-4 => 'y' .
+lets-nums-range-4 => 'z' .
+lets-nums => lets-nums-range-4 .
+maybe-lets-nums-star-5 => .
+maybe-lets-nums-star-5 => lets-nums maybe-lets-nums-star-5 .
+maybe-lets-nums => maybe-lets-nums-star-5 .
+maybe-lets-nums => .
+symbols-bar-6 => '.' .
+symbols-bar-6 => ' ' .
+symbols-bar-7 => ',' .
+symbols-bar-7 => symbols-bar-6 .
+symbols-bar-8 => '\"' .
+symbols-bar-8 => symbols-bar-7 .
+symbols-bar-9 => '\'' .
+symbols-bar-9 => symbols-bar-8 .
+symbols => symbols-bar-9 .
+literals => literal literals .
+literals => literal .
+literal-bar-10 => symbols .
+literal-bar-10 => lets-nums .
+literal => literal-bar-10 .
+
+
+Vars
+
+ x0
+
+Rules
+
+
+
+Syntactic non-terminals (defined by syntactic productions):
+  terms term-star-1 term patterns pattern file equation 
+
+Reading non-terminals (defined by lexical ->-productions):
+  
+
+Recognizing non-terminals (defined by lexical =>-productions):
+  symbols-bar-9 symbols-bar-8 symbols-bar-7 symbols-bar-6 symbols ows nl maybe-nl-star-2 maybe-nl maybe-lets-nums-star-5 maybe-lets-nums literals literal-bar-10 literal letter-range-3 letter lets-nums-range-4 lets-nums 
+
+Terminal symbols:
+  'z' 'y' 'x' 'w' 'v' 'u' 't' 's' 'r' 'q' 'p' 'o' 'n' 'm' 'l' 'k' 'j' 'i' 'h' 'g' 'f' 'e' 'd' 'c' 'b' 'a' ']' '\n' '\'' '\"' '[' 'Z' 'Y' 'X' 'W' 'V' 'U' 'T' 'S' 'R' 'Q' 'P' 'O' 'N' 'M' 'L' 'K' 'J' 'I' 'H' 'G' 'F' 'E' 'D' 'C' 'B' 'A' '=' '9' '8' '7' '6' '5' '4' '3' '2' '1' '0' '.' ',' ')' '(' '"' ' ' 
+
+
+
+(The parsing TRS for the grammar is:
+(
+Equation:  patterns[0] #' ' #'=' #' ' terms[1] -> equation[Equation(x0, x1)]
+P0:  #'\n' -> nl[]
+P1:  -> maybe-nl-star-2[]
+P10:  #'E' -> letter-range-3[]
+P100:  #'f' -> lets-nums-range-4[]
+P101:  #'g' -> lets-nums-range-4[]
+P102:  #'h' -> lets-nums-range-4[]
+P103:  #'i' -> lets-nums-range-4[]
+P104:  #'j' -> lets-nums-range-4[]
+P105:  #'k' -> lets-nums-range-4[]
+P106:  #'l' -> lets-nums-range-4[]
+P107:  #'m' -> lets-nums-range-4[]
+P108:  #'n' -> lets-nums-range-4[]
+P109:  #'o' -> lets-nums-range-4[]
+P11:  #'F' -> letter-range-3[]
+P110:  #'p' -> lets-nums-range-4[]
+P111:  #'q' -> lets-nums-range-4[]
+P112:  #'r' -> lets-nums-range-4[]
+P113:  #'s' -> lets-nums-range-4[]
+P114:  #'t' -> lets-nums-range-4[]
+P115:  #'u' -> lets-nums-range-4[]
+P116:  #'v' -> lets-nums-range-4[]
+P117:  #'w' -> lets-nums-range-4[]
+P118:  #'x' -> lets-nums-range-4[]
+P119:  #'y' -> lets-nums-range-4[]
+P12:  #'G' -> letter-range-3[]
+P120:  #'z' -> lets-nums-range-4[]
+P121:  #lets-nums-range-4 -> lets-nums[]
+P122:  -> maybe-lets-nums-star-5[]
+P123:  #lets-nums #maybe-lets-nums-star-5 -> maybe-lets-nums-star-5[]
+P124:  #maybe-lets-nums-star-5 -> maybe-lets-nums[]
+P125:  -> maybe-lets-nums[]
+P126:  #'.' -> symbols-bar-6[]
+P127:  #' ' -> symbols-bar-6[]
+P128:  #',' -> symbols-bar-7[]
+P129:  #symbols-bar-6 -> symbols-bar-7[]
+P13:  #'H' -> letter-range-3[]
+P130:  #'\"' -> symbols-bar-8[]
+P131:  #symbols-bar-7 -> symbols-bar-8[]
+P132:  #'\'' -> symbols-bar-9[]
+P133:  #symbols-bar-8 -> symbols-bar-9[]
+P134:  #symbols-bar-9 -> symbols[]
+P135:  #literal #literals -> literals[]
+P136:  #literal -> literals[]
+P137:  #symbols -> literal-bar-10[]
+P138:  #lets-nums -> literal-bar-10[]
+P139:  #literal-bar-10 -> literal[]
+P14:  #'I' -> letter-range-3[]
+P15:  #'J' -> letter-range-3[]
+P16:  #'K' -> letter-range-3[]
+P17:  #'L' -> letter-range-3[]
+P18:  #'M' -> letter-range-3[]
+P19:  #'N' -> letter-range-3[]
+P2:  #nl #maybe-nl-star-2 -> maybe-nl-star-2[]
+P20:  #'O' -> letter-range-3[]
+P21:  #'P' -> letter-range-3[]
+P22:  #'Q' -> letter-range-3[]
+P23:  #'R' -> letter-range-3[]
+P24:  #'S' -> letter-range-3[]
+P25:  #'T' -> letter-range-3[]
+P26:  #'U' -> letter-range-3[]
+P27:  #'V' -> letter-range-3[]
+P28:  #'W' -> letter-range-3[]
+P29:  #'X' -> letter-range-3[]
+P3:  #maybe-nl-star-2 -> maybe-nl[]
+P30:  #'Y' -> letter-range-3[]
+P31:  #'Z' -> letter-range-3[]
+P32:  #'a' -> letter-range-3[]
+P33:  #'b' -> letter-range-3[]
+P34:  #'c' -> letter-range-3[]
+P35:  #'d' -> letter-range-3[]
+P36:  #'e' -> letter-range-3[]
+P37:  #'f' -> letter-range-3[]
+P38:  #'g' -> letter-range-3[]
+P39:  #'h' -> letter-range-3[]
+P4:  #' ' -> ows[]
+P40:  #'i' -> letter-range-3[]
+P41:  #'j' -> letter-range-3[]
+P42:  #'k' -> letter-range-3[]
+P43:  #'l' -> letter-range-3[]
+P44:  #'m' -> letter-range-3[]
+P45:  #'n' -> letter-range-3[]
+P46:  #'o' -> letter-range-3[]
+P47:  #'p' -> letter-range-3[]
+P48:  #'q' -> letter-range-3[]
+P49:  #'r' -> letter-range-3[]
+P5:  -> ows[]
+P50:  #'s' -> letter-range-3[]
+P51:  #'t' -> letter-range-3[]
+P52:  #'u' -> letter-range-3[]
+P53:  #'v' -> letter-range-3[]
+P54:  #'w' -> letter-range-3[]
+P55:  #'x' -> letter-range-3[]
+P56:  #'y' -> letter-range-3[]
+P57:  #'z' -> letter-range-3[]
+P58:  #letter-range-3 -> letter[]
+P59:  #'0' -> lets-nums-range-4[]
+P6:  #'A' -> letter-range-3[]
+P60:  #'1' -> lets-nums-range-4[]
+P61:  #'2' -> lets-nums-range-4[]
+P62:  #'3' -> lets-nums-range-4[]
+P63:  #'4' -> lets-nums-range-4[]
+P64:  #'5' -> lets-nums-range-4[]
+P65:  #'6' -> lets-nums-range-4[]
+P66:  #'7' -> lets-nums-range-4[]
+P67:  #'8' -> lets-nums-range-4[]
+P68:  #'9' -> lets-nums-range-4[]
+P69:  #'A' -> lets-nums-range-4[]
+P7:  #'B' -> letter-range-3[]
+P70:  #'B' -> lets-nums-range-4[]
+P71:  #'C' -> lets-nums-range-4[]
+P72:  #'D' -> lets-nums-range-4[]
+P73:  #'E' -> lets-nums-range-4[]
+P74:  #'F' -> lets-nums-range-4[]
+P75:  #'G' -> lets-nums-range-4[]
+P76:  #'H' -> lets-nums-range-4[]
+P77:  #'I' -> lets-nums-range-4[]
+P78:  #'J' -> lets-nums-range-4[]
+P79:  #'K' -> lets-nums-range-4[]
+P8:  #'C' -> letter-range-3[]
+P80:  #'L' -> lets-nums-range-4[]
+P81:  #'M' -> lets-nums-range-4[]
+P82:  #'N' -> lets-nums-range-4[]
+P83:  #'O' -> lets-nums-range-4[]
+P84:  #'P' -> lets-nums-range-4[]
+P85:  #'Q' -> lets-nums-range-4[]
+P86:  #'R' -> lets-nums-range-4[]
+P87:  #'S' -> lets-nums-range-4[]
+P88:  #'T' -> lets-nums-range-4[]
+P89:  #'U' -> lets-nums-range-4[]
+P9:  #'D' -> letter-range-3[]
+P90:  #'V' -> lets-nums-range-4[]
+P91:  #'W' -> lets-nums-range-4[]
+P92:  #'X' -> lets-nums-range-4[]
+P93:  #'Y' -> lets-nums-range-4[]
+P94:  #'Z' -> lets-nums-range-4[]
+P95:  #'a' -> lets-nums-range-4[]
+P96:  #'b' -> lets-nums-range-4[]
+P97:  #'c' -> lets-nums-range-4[]
+P98:  #'d' -> lets-nums-range-4[]
+P99:  #'e' -> lets-nums-range-4[]
+Pattern:  #'h' #'i' -> pattern[Pattern]
+Patterns:  pattern[0] #' ' patterns[1] -> patterns[Patterns(x0, x1)]
+Patterns/1:  pattern[0] -> patterns[Patterns/1(x0)]
+Term-app:  term[0] #'(' term[1] #')' -> term[Term-app(x0, x1)]
+Term-literal:  #'"' #literal #'"' -> term[Term-literal]
+Term-name:  #letter term-star-1[0] -> term[Term-name(x0)]
+Term-name-0:  -> term-star-1[Term-name-0]
+Term-name-1:  #lets-nums term-star-1[0] -> term-star-1[Term-name-1(x0)]
+Term-pair:  #'[' #ows term[0] #ows #',' #ows term[1] #ows #']' -> term[Term-pair(x0, x1)]
+Term-paren:  #'(' #ows term[0] #ows #')' -> term[Term-paren(x0)]
+Terms:  term[0] #' ' terms[1] -> terms[Terms(x0, x1)]
+Terms/1:  term[0] -> terms[Terms/1(x0)]
+derp:  equation[0] -> file[derp(x0)]
+)
+)
+(The reorganizing TRS is terminating.)
+(Derivational complexity of the reorganizing TRS: O(n^0))
+(Local confluence of the reorganizing TRS: true)
+
+(Time elapsed: 0.015)
+Found nullable (maybe-nl-star-2, P1)
+Found nullable (maybe-lets-nums-star-5, P122)
+Found nullable (maybe-lets-nums, P124)
+Found nullable (maybe-lets-nums, P125)
+Found nullable (maybe-nl, P3)
+Found nullable (ows, P5)
+Found nullable (term-star-1, Term-name-0)
+)
+(The parsing TRS that arises from the final automaton:
+(
+Equation:  patterns[0] #' ' #'=' #' ' terms[1] -> equation[Equation(x0, x1)]
+P0:  #'\n' -> nl[]
+P1:  -> maybe-nl-star-2[]
+P10:  #'E' -> letter-range-3[]
+P100:  #'f' -> lets-nums-range-4[]
+P101:  #'g' -> lets-nums-range-4[]
+P102:  #'h' -> lets-nums-range-4[]
+P103:  #'i' -> lets-nums-range-4[]
+P104:  #'j' -> lets-nums-range-4[]
+P105:  #'k' -> lets-nums-range-4[]
+P106:  #'l' -> lets-nums-range-4[]
+P107:  #'m' -> lets-nums-range-4[]
+P108:  #'n' -> lets-nums-range-4[]
+P109:  #'o' -> lets-nums-range-4[]
+P11:  #'F' -> letter-range-3[]
+P110:  #'p' -> lets-nums-range-4[]
+P111:  #'q' -> lets-nums-range-4[]
+P112:  #'r' -> lets-nums-range-4[]
+P113:  #'s' -> lets-nums-range-4[]
+P114:  #'t' -> lets-nums-range-4[]
+P115:  #'u' -> lets-nums-range-4[]
+P116:  #'v' -> lets-nums-range-4[]
+P117:  #'w' -> lets-nums-range-4[]
+P118:  #'x' -> lets-nums-range-4[]
+P119:  #'y' -> lets-nums-range-4[]
+P12:  #'G' -> letter-range-3[]
+P120:  #'z' -> lets-nums-range-4[]
+P121:  #lets-nums-range-4 -> lets-nums[]
+P122:  -> maybe-lets-nums-star-5[]
+P123:  #lets-nums #maybe-lets-nums-star-5 -> maybe-lets-nums-star-5[]
+P124:  #maybe-lets-nums-star-5 -> maybe-lets-nums[]
+P125:  -> maybe-lets-nums[]
+P126:  #'.' -> symbols-bar-6[]
+P127:  #' ' -> symbols-bar-6[]
+P128:  #',' -> symbols-bar-7[]
+P129:  #symbols-bar-6 -> symbols-bar-7[]
+P13:  #'H' -> letter-range-3[]
+P130:  #'\"' -> symbols-bar-8[]
+P131:  #symbols-bar-7 -> symbols-bar-8[]
+P132:  #'\'' -> symbols-bar-9[]
+P133:  #symbols-bar-8 -> symbols-bar-9[]
+P134:  #symbols-bar-9 -> symbols[]
+P135:  #literal #literals -> literals[]
+P136:  #literal -> literals[]
+P137:  #symbols -> literal-bar-10[]
+P138:  #lets-nums -> literal-bar-10[]
+P139:  #literal-bar-10 -> literal[]
+P14:  #'I' -> letter-range-3[]
+P15:  #'J' -> letter-range-3[]
+P16:  #'K' -> letter-range-3[]
+P17:  #'L' -> letter-range-3[]
+P18:  #'M' -> letter-range-3[]
+P19:  #'N' -> letter-range-3[]
+P2:  #nl #maybe-nl-star-2 -> maybe-nl-star-2[]
+P20:  #'O' -> letter-range-3[]
+P21:  #'P' -> letter-range-3[]
+P22:  #'Q' -> letter-range-3[]
+P23:  #'R' -> letter-range-3[]
+P24:  #'S' -> letter-range-3[]
+P25:  #'T' -> letter-range-3[]
+P26:  #'U' -> letter-range-3[]
+P27:  #'V' -> letter-range-3[]
+P28:  #'W' -> letter-range-3[]
+P29:  #'X' -> letter-range-3[]
+P3:  #maybe-nl-star-2 -> maybe-nl[]
+P30:  #'Y' -> letter-range-3[]
+P31:  #'Z' -> letter-range-3[]
+P32:  #'a' -> letter-range-3[]
+P33:  #'b' -> letter-range-3[]
+P34:  #'c' -> letter-range-3[]
+P35:  #'d' -> letter-range-3[]
+P36:  #'e' -> letter-range-3[]
+P37:  #'f' -> letter-range-3[]
+P38:  #'g' -> letter-range-3[]
+P39:  #'h' -> letter-range-3[]
+P4:  #' ' -> ows[]
+P40:  #'i' -> letter-range-3[]
+P41:  #'j' -> letter-range-3[]
+P42:  #'k' -> letter-range-3[]
+P43:  #'l' -> letter-range-3[]
+P44:  #'m' -> letter-range-3[]
+P45:  #'n' -> letter-range-3[]
+P46:  #'o' -> letter-range-3[]
+P47:  #'p' -> letter-range-3[]
+P48:  #'q' -> letter-range-3[]
+P49:  #'r' -> letter-range-3[]
+P5:  -> ows[]
+P50:  #'s' -> letter-range-3[]
+P51:  #'t' -> letter-range-3[]
+P52:  #'u' -> letter-range-3[]
+P53:  #'v' -> letter-range-3[]
+P54:  #'w' -> letter-range-3[]
+P55:  #'x' -> letter-range-3[]
+P56:  #'y' -> letter-range-3[]
+P57:  #'z' -> letter-range-3[]
+P58:  #letter-range-3 -> letter[]
+P59:  #'0' -> lets-nums-range-4[]
+P6:  #'A' -> letter-range-3[]
+P60:  #'1' -> lets-nums-range-4[]
+P61:  #'2' -> lets-nums-range-4[]
+P62:  #'3' -> lets-nums-range-4[]
+P63:  #'4' -> lets-nums-range-4[]
+P64:  #'5' -> lets-nums-range-4[]
+P65:  #'6' -> lets-nums-range-4[]
+P66:  #'7' -> lets-nums-range-4[]
+P67:  #'8' -> lets-nums-range-4[]
+P68:  #'9' -> lets-nums-range-4[]
+P69:  #'A' -> lets-nums-range-4[]
+P7:  #'B' -> letter-range-3[]
+P70:  #'B' -> lets-nums-range-4[]
+P71:  #'C' -> lets-nums-range-4[]
+P72:  #'D' -> lets-nums-range-4[]
+P73:  #'E' -> lets-nums-range-4[]
+P74:  #'F' -> lets-nums-range-4[]
+P75:  #'G' -> lets-nums-range-4[]
+P76:  #'H' -> lets-nums-range-4[]
+P77:  #'I' -> lets-nums-range-4[]
+P78:  #'J' -> lets-nums-range-4[]
+P79:  #'K' -> lets-nums-range-4[]
+P8:  #'C' -> letter-range-3[]
+P80:  #'L' -> lets-nums-range-4[]
+P81:  #'M' -> lets-nums-range-4[]
+P82:  #'N' -> lets-nums-range-4[]
+P83:  #'O' -> lets-nums-range-4[]
+P84:  #'P' -> lets-nums-range-4[]
+P85:  #'Q' -> lets-nums-range-4[]
+P86:  #'R' -> lets-nums-range-4[]
+P87:  #'S' -> lets-nums-range-4[]
+P88:  #'T' -> lets-nums-range-4[]
+P89:  #'U' -> lets-nums-range-4[]
+P9:  #'D' -> letter-range-3[]
+P90:  #'V' -> lets-nums-range-4[]
+P91:  #'W' -> lets-nums-range-4[]
+P92:  #'X' -> lets-nums-range-4[]
+P93:  #'Y' -> lets-nums-range-4[]
+P94:  #'Z' -> lets-nums-range-4[]
+P95:  #'a' -> lets-nums-range-4[]
+P96:  #'b' -> lets-nums-range-4[]
+P97:  #'c' -> lets-nums-range-4[]
+P98:  #'d' -> lets-nums-range-4[]
+P99:  #'e' -> lets-nums-range-4[]
+Pattern:  #'h' #'i' -> pattern[Pattern]
+Patterns:  pattern[0] #' ' patterns[1] -> patterns[Patterns(x0, x1)]
+Patterns/1:  pattern[0] -> patterns[Patterns/1(x0)]
+Term-app:  term[0] #'(' term[1] #')' -> term[Term-app(x0, x1)]
+Term-literal:  #'"' #literal #'"' -> term[Term-literal]
+Term-name:  #letter term-star-1[0] -> term[Term-name(x0)]
+Term-name-0:  -> term-star-1[Term-name-0]
+Term-name-1:  #lets-nums term-star-1[0] -> term-star-1[Term-name-1(x0)]
+Term-pair:  #'[' #ows term[0] #ows #',' #ows term[1] #ows #']' -> term[Term-pair(x0, x1)]
+Term-paren:  #'(' #ows term[0] #ows #')' -> term[Term-paren(x0)]
+Terms:  term[0] #' ' terms[1] -> terms[Terms(x0, x1)]
+Terms/1:  term[0] -> terms[Terms/1(x0)]
+derp:  equation[0] -> file[derp(x0)]
+)
+)
+(The TRS corresponding to the final parsing TRS:
+Equation: Equation . patterns(x0) . ' ' . '=' . ' ' . terms(x1) . x2 -> equation(Equation(x0, x1)) . x2
+P0: P0 . '\n' . x1 -> nl . x1
+P1: P1 . x1 -> maybe-nl-star-2 . x1
+P10: P10 . 'E' . x1 -> letter-range-3 . x1
+P100: P100 . 'f' . x1 -> lets-nums-range-4 . x1
+P101: P101 . 'g' . x1 -> lets-nums-range-4 . x1
+P102: P102 . 'h' . x1 -> lets-nums-range-4 . x1
+P103: P103 . 'i' . x1 -> lets-nums-range-4 . x1
+P104: P104 . 'j' . x1 -> lets-nums-range-4 . x1
+P105: P105 . 'k' . x1 -> lets-nums-range-4 . x1
+P106: P106 . 'l' . x1 -> lets-nums-range-4 . x1
+P107: P107 . 'm' . x1 -> lets-nums-range-4 . x1
+P108: P108 . 'n' . x1 -> lets-nums-range-4 . x1
+P109: P109 . 'o' . x1 -> lets-nums-range-4 . x1
+P11: P11 . 'F' . x1 -> letter-range-3 . x1
+P110: P110 . 'p' . x1 -> lets-nums-range-4 . x1
+P111: P111 . 'q' . x1 -> lets-nums-range-4 . x1
+P112: P112 . 'r' . x1 -> lets-nums-range-4 . x1
+P113: P113 . 's' . x1 -> lets-nums-range-4 . x1
+P114: P114 . 't' . x1 -> lets-nums-range-4 . x1
+P115: P115 . 'u' . x1 -> lets-nums-range-4 . x1
+P116: P116 . 'v' . x1 -> lets-nums-range-4 . x1
+P117: P117 . 'w' . x1 -> lets-nums-range-4 . x1
+P118: P118 . 'x' . x1 -> lets-nums-range-4 . x1
+P119: P119 . 'y' . x1 -> lets-nums-range-4 . x1
+P12: P12 . 'G' . x1 -> letter-range-3 . x1
+P120: P120 . 'z' . x1 -> lets-nums-range-4 . x1
+P121: P121 . lets-nums-range-4 . x1 -> lets-nums . x1
+P122: P122 . x1 -> maybe-lets-nums-star-5 . x1
+P123: P123 . lets-nums . maybe-lets-nums-star-5 . x1 -> maybe-lets-nums-star-5 . x1
+P124: P124 . maybe-lets-nums-star-5 . x1 -> maybe-lets-nums . x1
+P125: P125 . x1 -> maybe-lets-nums . x1
+P126: P126 . '.' . x1 -> symbols-bar-6 . x1
+P127: P127 . ' ' . x1 -> symbols-bar-6 . x1
+P128: P128 . ',' . x1 -> symbols-bar-7 . x1
+P129: P129 . symbols-bar-6 . x1 -> symbols-bar-7 . x1
+P13: P13 . 'H' . x1 -> letter-range-3 . x1
+P130: P130 . '\"' . x1 -> symbols-bar-8 . x1
+P131: P131 . symbols-bar-7 . x1 -> symbols-bar-8 . x1
+P132: P132 . '\'' . x1 -> symbols-bar-9 . x1
+P133: P133 . symbols-bar-8 . x1 -> symbols-bar-9 . x1
+P134: P134 . symbols-bar-9 . x1 -> symbols . x1
+P135: P135 . literal . literals . x1 -> literals . x1
+P136: P136 . literal . x1 -> literals . x1
+P137: P137 . symbols . x1 -> literal-bar-10 . x1
+P138: P138 . lets-nums . x1 -> literal-bar-10 . x1
+P139: P139 . literal-bar-10 . x1 -> literal . x1
+P14: P14 . 'I' . x1 -> letter-range-3 . x1
+P15: P15 . 'J' . x1 -> letter-range-3 . x1
+P16: P16 . 'K' . x1 -> letter-range-3 . x1
+P17: P17 . 'L' . x1 -> letter-range-3 . x1
+P18: P18 . 'M' . x1 -> letter-range-3 . x1
+P19: P19 . 'N' . x1 -> letter-range-3 . x1
+P2: P2 . nl . maybe-nl-star-2 . x1 -> maybe-nl-star-2 . x1
+P20: P20 . 'O' . x1 -> letter-range-3 . x1
+P21: P21 . 'P' . x1 -> letter-range-3 . x1
+P22: P22 . 'Q' . x1 -> letter-range-3 . x1
+P23: P23 . 'R' . x1 -> letter-range-3 . x1
+P24: P24 . 'S' . x1 -> letter-range-3 . x1
+P25: P25 . 'T' . x1 -> letter-range-3 . x1
+P26: P26 . 'U' . x1 -> letter-range-3 . x1
+P27: P27 . 'V' . x1 -> letter-range-3 . x1
+P28: P28 . 'W' . x1 -> letter-range-3 . x1
+P29: P29 . 'X' . x1 -> letter-range-3 . x1
+P3: P3 . maybe-nl-star-2 . x1 -> maybe-nl . x1
+P30: P30 . 'Y' . x1 -> letter-range-3 . x1
+P31: P31 . 'Z' . x1 -> letter-range-3 . x1
+P32: P32 . 'a' . x1 -> letter-range-3 . x1
+P33: P33 . 'b' . x1 -> letter-range-3 . x1
+P34: P34 . 'c' . x1 -> letter-range-3 . x1
+P35: P35 . 'd' . x1 -> letter-range-3 . x1
+P36: P36 . 'e' . x1 -> letter-range-3 . x1
+P37: P37 . 'f' . x1 -> letter-range-3 . x1
+P38: P38 . 'g' . x1 -> letter-range-3 . x1
+P39: P39 . 'h' . x1 -> letter-range-3 . x1
+P4: P4 . ' ' . x1 -> ows . x1
+P40: P40 . 'i' . x1 -> letter-range-3 . x1
+P41: P41 . 'j' . x1 -> letter-range-3 . x1
+P42: P42 . 'k' . x1 -> letter-range-3 . x1
+P43: P43 . 'l' . x1 -> letter-range-3 . x1
+P44: P44 . 'm' . x1 -> letter-range-3 . x1
+P45: P45 . 'n' . x1 -> letter-range-3 . x1
+P46: P46 . 'o' . x1 -> letter-range-3 . x1
+P47: P47 . 'p' . x1 -> letter-range-3 . x1
+P48: P48 . 'q' . x1 -> letter-range-3 . x1
+P49: P49 . 'r' . x1 -> letter-range-3 . x1
+P5: P5 . x1 -> ows . x1
+P50: P50 . 's' . x1 -> letter-range-3 . x1
+P51: P51 . 't' . x1 -> letter-range-3 . x1
+P52: P52 . 'u' . x1 -> letter-range-3 . x1
+P53: P53 . 'v' . x1 -> letter-range-3 . x1
+P54: P54 . 'w' . x1 -> letter-range-3 . x1
+P55: P55 . 'x' . x1 -> letter-range-3 . x1
+P56: P56 . 'y' . x1 -> letter-range-3 . x1
+P57: P57 . 'z' . x1 -> letter-range-3 . x1
+P58: P58 . letter-range-3 . x1 -> letter . x1
+P59: P59 . '0' . x1 -> lets-nums-range-4 . x1
+P6: P6 . 'A' . x1 -> letter-range-3 . x1
+P60: P60 . '1' . x1 -> lets-nums-range-4 . x1
+P61: P61 . '2' . x1 -> lets-nums-range-4 . x1
+P62: P62 . '3' . x1 -> lets-nums-range-4 . x1
+P63: P63 . '4' . x1 -> lets-nums-range-4 . x1
+P64: P64 . '5' . x1 -> lets-nums-range-4 . x1
+P65: P65 . '6' . x1 -> lets-nums-range-4 . x1
+P66: P66 . '7' . x1 -> lets-nums-range-4 . x1
+P67: P67 . '8' . x1 -> lets-nums-range-4 . x1
+P68: P68 . '9' . x1 -> lets-nums-range-4 . x1
+P69: P69 . 'A' . x1 -> lets-nums-range-4 . x1
+P7: P7 . 'B' . x1 -> letter-range-3 . x1
+P70: P70 . 'B' . x1 -> lets-nums-range-4 . x1
+P71: P71 . 'C' . x1 -> lets-nums-range-4 . x1
+P72: P72 . 'D' . x1 -> lets-nums-range-4 . x1
+P73: P73 . 'E' . x1 -> lets-nums-range-4 . x1
+P74: P74 . 'F' . x1 -> lets-nums-range-4 . x1
+P75: P75 . 'G' . x1 -> lets-nums-range-4 . x1
+P76: P76 . 'H' . x1 -> lets-nums-range-4 . x1
+P77: P77 . 'I' . x1 -> lets-nums-range-4 . x1
+P78: P78 . 'J' . x1 -> lets-nums-range-4 . x1
+P79: P79 . 'K' . x1 -> lets-nums-range-4 . x1
+P8: P8 . 'C' . x1 -> letter-range-3 . x1
+P80: P80 . 'L' . x1 -> lets-nums-range-4 . x1
+P81: P81 . 'M' . x1 -> lets-nums-range-4 . x1
+P82: P82 . 'N' . x1 -> lets-nums-range-4 . x1
+P83: P83 . 'O' . x1 -> lets-nums-range-4 . x1
+P84: P84 . 'P' . x1 -> lets-nums-range-4 . x1
+P85: P85 . 'Q' . x1 -> lets-nums-range-4 . x1
+P86: P86 . 'R' . x1 -> lets-nums-range-4 . x1
+P87: P87 . 'S' . x1 -> lets-nums-range-4 . x1
+P88: P88 . 'T' . x1 -> lets-nums-range-4 . x1
+P89: P89 . 'U' . x1 -> lets-nums-range-4 . x1
+P9: P9 . 'D' . x1 -> letter-range-3 . x1
+P90: P90 . 'V' . x1 -> lets-nums-range-4 . x1
+P91: P91 . 'W' . x1 -> lets-nums-range-4 . x1
+P92: P92 . 'X' . x1 -> lets-nums-range-4 . x1
+P93: P93 . 'Y' . x1 -> lets-nums-range-4 . x1
+P94: P94 . 'Z' . x1 -> lets-nums-range-4 . x1
+P95: P95 . 'a' . x1 -> lets-nums-range-4 . x1
+P96: P96 . 'b' . x1 -> lets-nums-range-4 . x1
+P97: P97 . 'c' . x1 -> lets-nums-range-4 . x1
+P98: P98 . 'd' . x1 -> lets-nums-range-4 . x1
+P99: P99 . 'e' . x1 -> lets-nums-range-4 . x1
+Pattern: Pattern . 'h' . 'i' . x1 -> pattern(Pattern) . x1
+Patterns: Patterns . pattern(x0) . ' ' . patterns(x1) . x2 -> patterns(Patterns(x0, x1)) . x2
+Patterns/1: Patterns/1 . pattern(x0) . x1 -> patterns(Patterns/1(x0)) . x1
+Term-app: term(x0) . '(' . term(x1) . ')' . x2 -> term(Term-app(x0, x1)) . x2
+Term-literal: Term-literal . '"' . literal . '"' . x1 -> term(Term-literal) . x1
+Term-name: Term-name . letter . term-star-1(x0) . x1 -> term(Term-name(x0)) . x1
+Term-name-0: Term-name-0 . x1 -> term-star-1(Term-name-0) . x1
+Term-name-1: Term-name-1 . lets-nums . term-star-1(x0) . x1 -> term-star-1(Term-name-1(x0)) . x1
+Term-pair: Term-pair . '[' . ows . term(x0) . ows . ',' . ows . term(x1) . ows . ']' . x2 -> term(Term-pair(x0, x1)) . x2
+Term-paren: Term-paren . '(' . ows . term(x0) . ows . ')' . x1 -> term(Term-paren(x0)) . x1
+Terms: Terms . term(x0) . ' ' . terms(x1) . x2 -> terms(Terms(x0, x1)) . x2
+Terms/1: Terms/1 . term(x0) . Terms/1_end . x1 -> terms(Terms/1(x0)) . x1
+derp: derp . equation(x0) . x1 -> file(derp(x0)) . x1
+)
+(No reorganizing critical pairs found.)
+(No parsing critical pairs found.)
